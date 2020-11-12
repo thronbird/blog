@@ -43,6 +43,8 @@ A在行尾插入
 
 - command + k  zen mode
 
+- alt+option+f 格式化代码
+
   
 
 
