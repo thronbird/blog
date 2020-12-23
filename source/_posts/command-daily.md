@@ -37,9 +37,9 @@ A在行尾插入
 
 - code . 在当前位置打开vscode（Command Palette (Ctrl+Shift+P) and type 'shell command' ）
 
-- ctrl+T  查找匹配文件 symbol
-
 - command + p navigate files
+
+- ctrl+t  查找 symbol
 
 - command + k  zen mode
 
@@ -118,7 +118,7 @@ conntrack -L
 ./bin/kafka-consumer-groups.sh --bootstrap-server 172.20.61.203:6667 --list --new-consumer  
 
 //计算消息的消息堆积情况
-./bin/kafka-consumer-groups.sh --bootstrap-server 172.20.61.203:6667 --describe --group  gateway-api-topic-consumer-group
+./bin/kafka-consumer-groups.sh --bootstrap-server 172.20.61.203:6667 --describe --group  gateway-traffic-consumer-group
 
 ---????
  ./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 16 --topic cat-agent-trace

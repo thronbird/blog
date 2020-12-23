@@ -18,3 +18,13 @@ tags:
 - By convention, one-method interfaces are named by the method name plus an -er suffix or similar modification to construct an agent noun: `Reader`, `Writer`, `Formatter`, `CloseNotifier` etc.
 
 
+
+
+
+## FAQ
+
+- bee工具下载： GO111MODULE=on go get -u github.com/beego/bee@v1.10.0
+- bee api根据注解生成commentsRouter不生效：把新增的接口定义去掉，重新生成一遍，然后加上再重新生成
+- 版本不一致：多个gopath最好去掉，保持一个gopath，方便管理
+
+
