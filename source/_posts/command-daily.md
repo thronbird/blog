@@ -29,6 +29,18 @@ A在行尾插入
 `diw` to delete in the word (doesn't include spaces)
 `daw` to delete around the word (includes spaces before the next word).
 
+### GIT
+
+```
+回滚版本：
+git reflog
+git reset --hard HEAD@{54}
+git checkout HEAD@{57}
+
+回退：
+git reset --hard ORIG_HEAD
+```
+
 
 
 ### VS_CODE
@@ -130,6 +142,22 @@ conntrack -L
 
 
 
+### DOCKER
+
+**Docker: remove all Exited containers**
+
+sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+
+sudo docker rmi $(sudo docker images -f "dangling=true" -q)
+
+ <https://stackoverflow.com/questions/28377446/how-to-physically-remove-untagged-docker-images>  
+
+docker image prune -a
+
+ <https://stackoverflow.com/questions/54480752/error-response-from-daemon-conflict-unable-to-delete-2602b4852593-cannot-be-f> 
+
+
+
 ### K8S
 
 - 根据标签清理过期deployment
@@ -181,13 +209,9 @@ sum(node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate{name
 
 
 
-### Grafana
+### brew 
 
  brew services restart grafana
-
-
-
-### brew 
 
 
 
