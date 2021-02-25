@@ -39,6 +39,22 @@ git checkout HEAD@{57}
 
 回退：
 git reset --hard ORIG_HEAD
+
+保存修改快照：
+  |git stash push -m "my_stash" 
+  |git stash save my_stash
+  
+->git stash list
+
+->|  git stash pop stash@{index}
+  |  git stash apply stash@{index}
+  |  git stash apply stash^{/my_stash}
+
+git diff > some.patch -> git apply some.patch
+
+设置代理：
+git config --global https.proxy http://127.0.0.1:9999
+git config --global http.proxy http://127.0.0.1:9999
 ```
 
 
@@ -81,6 +97,12 @@ ll proc/{pid}/fd
 
 
 for i in *;do mv $i xxx${i}xxx ;done 批量重命名
+
+
+
+sudo passwd root 修改密码
+
+sudo passwd -d root 删除密码
 
 
 
@@ -164,6 +186,10 @@ docker image prune -a
 
 k get deployment --show-labels |grep s-microfe-first | cut -d ' ' -f 1 |xargs kubectl delete deployment
 
+ k get deployment | grep lll- |cut -d " " -f 1 |xargs kubectl delete deployment
+
+
+
 - 查询所有容器内进程的Xmx配置
 
  kubectl get pods -n local-test |awk '{if (NR> 1) print $1}' |xargs -n 1 -I {} kubectl -n local-test exec {} -it -- ps -ef|grep -i -oP XmX[0-9][0-9][0-9]m
@@ -219,4 +245,11 @@ sum(node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate{name
 
 curl -O https://arthas.aliyun.com/arthas-boot.jar
 java -jar arthas-boot.jar
+trace xxx xxx
 
+
+
+### Arthas
+
+curl -O https://arthas.aliyun.com/arthas-boot.jar
+java -jar arthas-boot.jar

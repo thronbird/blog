@@ -4,6 +4,16 @@ date: 2020-06-28 17:51:45
 tags:
 ---
 
+## 语言机制
+
+内存分配 span
+
+Gmp调度模型
+
+chan  同步的写法写异步
+
+
+
 ## 语法
 
 - map 类型需要make才能用是因为map是引用类型，默认的零值是nil 
@@ -19,12 +29,9 @@ tags:
 
 
 
-
-
 ## FAQ
 
 - bee工具下载： GO111MODULE=on go get -u github.com/beego/bee@v1.10.0
 - bee api根据注解生成commentsRouter不生效：把新增的接口定义去掉，重新生成一遍，然后加上再重新生成
 - 版本不一致：多个gopath最好去掉，保持一个gopath，方便管理
-
 
