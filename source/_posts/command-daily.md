@@ -59,6 +59,15 @@ git config --global http.proxy http://127.0.0.1:9999
 
 
 
+### MAVEN
+
+```xml
+查看setting.xml文件位置
+mvn help:effective-settings
+```
+
+
+
 ### VS_CODE
 
 -  ctrl+ ` 打开终端
