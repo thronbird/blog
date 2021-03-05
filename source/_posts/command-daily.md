@@ -246,7 +246,9 @@ sum(node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate{name
 
 ### brew 
 
- brew services restart grafana
+ALL_PROXY=socks5://127.0.0.1:10000 brew upgrade
+
+brew services restart grafana
 
 
 
